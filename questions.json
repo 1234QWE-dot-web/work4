@@ -1,24 +1,65 @@
-[  
-  {  
-    "type": "choice",  
-    "prompt": "选择以下哪个是单词 '同化' 的正确解释:",  
-    "options": ["代谢过程", "分解过程", "合成过程"],  
-    "answer": "代谢过程"  
-  },  
-  {  
-    "type": "fill-in",  
-    "prompt": "将单词 '同化' 翻译为英文：",  
-    "answer": "assimilation"  
-  },  
-  {  
-    "type": "choice",  
-    "prompt": "选择以下哪个是单词 '抗生素' 的正确解释:",  
-    "options": ["生物分子", "药物类物质", "抗氧化剂"],  
-    "answer": "药物类物质"  
-  },  
-  {  
-    "type": "fill-in",  
-    "prompt": "将单词 '抗生素' 翻译为英文：",  
-    "answer": "antibiotic"  
-  }  
-]
+import json  
+import random  
+
+# 从文件中读取词汇和解释  
+def read_word_file(file_path):  
+    questions = []  
+    with open(file_path, 'r', encoding='utf-8') as file:  
+        for line in file:  
+            if ':' in line:  
+                word, meaning = line.split(':', 1)  
+                word = word.strip()  
+                meaning = meaning.strip()  
+                questions.append((word, meaning))  
+    return questions  
+
+# 生成问题列表  
+def generate_questions(questions, num_questions=10):  
+    question_list = []  
+    # 随机选择不超过 num_questions 个问题  
+    selected_words = random.sample(questions, min(num_questions, len(questions)))  
+    
+    for word, meaning in selected_words:  
+        # 选择题，选择正确选项和伪选项  
+        options = [meaning]  
+        while len(options) < 4:  # 保证每道题有4个选项  
+            random_word = random.choice(questions)[1]  
+            if random_word not in options:  # 确保不重复  
+                options.append(random_word)  
+        random.shuffle(options)  
+
+        question_list.append({  
+            "type": "choice",  
+            "prompt": f"选择以下哪个是单词 '{word}' 的正确解释:",  
+            "options": options,  
+            "answer": meaning  
+        })  
+
+        # 填空题  
+        question_list.append({  
+            "type": "fill-in",  
+            "prompt": f"将单词 '{meaning}' 翻译为英文：",  
+            "answer": word  
+        })  
+
+    return question_list  
+
+# 写入问题到 JSON 文件  
+def write_questions_to_json(file_path, questions):  
+    with open(file_path, 'w', encoding='utf-8') as json_file:  
+        json.dump(questions, json_file, ensure_ascii=False, indent=2)  
+
+# 主程序  
+word_file_path = '/mnt/data/file-NJP6mAwUKKPZWW4Spqzb2b'  # word.txt 文件路径  
+output_json_path = 'questions.json'  # 输出问题文件路径  
+
+# 从 word.txt 读取词汇和解释  
+word_data = read_word_file(word_file_path)  
+
+# 生成问题  
+questions = generate_questions(word_data, num_questions=10)  
+
+# 写入问题集到 JSON 文件  
+write_questions_to_json(output_json_path, questions)  
+
+print(f"已生成问题集到 {output_json_path}")
