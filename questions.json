@@ -1,0 +1,24 @@
+[  
+  {  
+    "type": "choice",  
+    "prompt": "选择以下哪个是单词 '同化' 的正确解释:",  
+    "options": ["代谢过程", "分解过程", "合成过程"],  
+    "answer": "代谢过程"  
+  },  
+  {  
+    "type": "fill-in",  
+    "prompt": "将单词 '同化' 翻译为英文：",  
+    "answer": "assimilation"  
+  },  
+  {  
+    "type": "choice",  
+    "prompt": "选择以下哪个是单词 '抗生素' 的正确解释:",  
+    "options": ["生物分子", "药物类物质", "抗氧化剂"],  
+    "answer": "药物类物质"  
+  },  
+  {  
+    "type": "fill-in",  
+    "prompt": "将单词 '抗生素' 翻译为英文：",  
+    "answer": "antibiotic"  
+  }  
+]
