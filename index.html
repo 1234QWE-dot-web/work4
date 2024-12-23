@@ -3,40 +3,53 @@
 <head>  
   <meta charset="UTF-8">  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>生化词汇小游戏</title>  
-  <link rel="stylesheet" href="style.css">  
+  <title>文件内容展示</title>  
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">  
+  <style>  
+    body {  
+      font-family: 'Roboto', Arial, sans-serif;  
+      margin: 0;  
+      padding: 20px;  
+      background-color: #f5f5f5;  
+    }  
+
+    h1 {  
+      text-align: center;  
+      color: #34495e;  
+    }  
+
+    .file-content {  
+      white-space: pre-wrap; /* 保留文本中的换行和空格 */  
+      background-color: #ffffff;  
+      padding: 20px;  
+      border-radius: 10px;  
+      border: 1px solid #cccccc;  
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+      max-width: 80%;  
+      margin: 20px auto;  
+      overflow-y: auto;  
+      max-height: 400px;  
+    }  
+  </style>  
 </head>  
 <body>  
-  <!-- 视频背景 -->  
-  <div class="video-background">  
-    <video autoplay muted loop playsinline>  
-      <source src="DNA动图.mp4" type="video/mp4">  
-      您的设备不支持此视频。  
-    </video>  
+  <h1>文件内容展示 - word.txt</h1>  
+  <div class="file-content" id="file-content">  
+    加载中...  
   </div>  
 
-  <!-- 游戏主内容 -->  
-  <div class="game-container">  
-    <header class="game-header">  
-      <h1 class="game-title">🧬 生化词汇小游戏 🧬</h1>  
-      <p class="game-subtitle">快来挑战你的生化词汇知识吧！</p>  
-    </header>  
-    <main id="game-main">  
-      <div id="question-box">  
-        <p id="question-text" class="question-text"></p>  
-        <div id="answer-options" class="answer-options"></div>  
-      </div>  
-      <div id="actions">  
-        <button id="next-button" class="button hidden">下一题 ➡️</button>  
-      </div>  
-    </main>  
-    <footer class="game-footer">  
-      <p id="feedback"></p>  
-      <p class="score" id="score">得分: 0</p>  
-    </footer>  
-  </div>  
-
-  <script src="script.js"></script>  
+  <script>  
+    // 动态加载 word.txt 文件内容并显示  
+    fetch('word.txt')  
+      .then(response => response.text())  
+      .then(data => {  
+        const fileContentDiv = document.getElementById('file-content');  
+        fileContentDiv.textContent = data; // 将文件内容放入 DIV 中  
+      })  
+      .catch(err => {  
+        console.error('无法加载文件:', err);  
+        document.getElementById('file-content').textContent = '无法加载文件内容！';  
+      });  
+  </script>  
 </body>  
 </html>
