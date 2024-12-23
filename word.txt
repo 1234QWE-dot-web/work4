@@ -1,0 +1,172 @@
+assimilation: 同化
+dissimilation: 异化
+macromolecule: 大分子、高分子
+hormones: 激素
+flagella: 鞭毛
+antibiotic: 抗生素
+myriad: 大量的、无数的
+luciferin: 荧光素
+luciferase: 荧光素酶
+erythrocyte: 红细胞
+hemoglobin: 血红蛋白
+keratin: 角蛋白
+peptide bond: 肽键
+amide linkage: 酰胺键
+covalent: 共价的
+hydrolyze: 水解
+carboxyl: 羧基
+carbonyl: 羰基
+constituent: 成分、构成部分
+chiral: 手性的
+stereoisomer: 立体异构
+superposable: 可重叠的
+enantiomer: 对映异构体
+epimer: 差向异构体
+symmetric: 对称的
+asymmetric: 不对称的
+glycine: 甘氨酸
+alanine: 丙氨酸
+proline: 脯氨酸
+valine: 缬氨酸
+leucine: 亮氨酸
+isoleucine: 异亮氨酸
+methionine: 甲硫氨酸
+phenylalanine: 苯丙氨酸
+tyrosine: 酪氨酸
+tryptophan: 色氨酸
+serine: 丝氨酸
+threonine: 苏氨酸
+cysteine: 半胱氨酸
+asparagine: 天冬酰胺
+glutamine: 谷氨酰胺
+aspartate: 天冬氨酸
+glutamate: 谷氨酸
+lysine: 赖氨酸
+arginine: 精氨酸
+histidine: 组氨酸
+conjugated proteins: 缀合蛋白质
+prosthetic group: 辅基
+coenzyme: 辅酶
+salting out: 盐析
+dialysis: 透析
+ultrafiltration: 超滤
+chromatography: 层析、色谱
+ion: 离子
+size-exclusion: 排阻（层析）
+affinity: 亲和
+ligand: 配体
+HPLC: 高效液相色谱
+electrophoresis: 电泳
+trypsin: 胰蛋白酶
+pepsin: 胃蛋白酶
+chymotrypsin: 糜蛋白酶
+isoelectric point: 等电点
+ninhydrin: 水合茚三酮
+α-helix: α螺旋
+β-sheet: β折叠
+β-turn: β转角
+solute: 溶质
+solution: 溶液
+solubility: 溶解度
+precipitate: 沉淀
+amide: 酰胺
+charged: 带电荷的
+zwitterion: 兼性离子
+dipolar: 偶极离子
+myoglobin: 肌红蛋白
+globular: 球状的
+motif: 模体
+super secondary: 超二级
+tertiary: 三级的
+quaternary: 四级的
+domain: 结构域
+saturated: 饱和的
+unsaturated: 不饱和的
+protomer: 原体
+monomer: 单体
+subunit: 亚基
+oligomer: 寡聚体
+denaturation: 变性
+renaturation: 复性
+prion: 朊病毒
+heme: 血红素
+dissociation: 解离
+biotin: 生物素
+avidin: 亲和素
+allosteric: 别构
+sickle: 镰刀型
+anemia: 贫血
+immunoblot (western blot): 免疫印迹
+immunoglobulins: 免疫球蛋白
+actin: 肌动蛋白
+tropomyosin: 原肌球蛋白
+myosin: 肌球蛋白
+troponin: 肌钙蛋白
+holoenzyme: 全酶
+abzyme: 抗体酶
+steady state: 稳态
+proteases: 蛋白酶
+turnover number: 转换数
+compound: 化合物
+-ose: 后缀，糖
+mutarotation: 变旋现象
+pyranose: 吡喃糖
+furanose: 呋喃糖
+anomeric: 异构的、异构
+anomeric carbon: 异头碳
+agar: 琼脂
+agarose: 琼脂糖
+carbohydrate: 糖
+saccharide: 糖
+starch: 淀粉
+glycogen: 糖原
+maltose: 麦芽糖
+Galactose: 半乳糖
+lactose: 乳糖
+sucrose: 蔗糖
+cellulose: 纤维素
+glycoconjugate: 糖缀合物（联合多糖）
+configuration: 构型
+conformation: 构象
+disaccharide: 二糖
+glycosidic bond: 糖苷键
+proteoglycan: 蛋白聚糖
+glycoproteins: 糖蛋白
+glycolipids: 糖脂
+lectins: 凝集素
+ester: 酯
+phosphate: 磷酸
+phosphorylate: 磷酸化
+phosphodiester bond: 磷酸二酯键
+polymer: 聚合物
+base: 碱基
+purine: 嘌呤
+pyrimidine: 嘧啶
+adenine: 腺嘌呤
+guanine: 鸟嘌呤
+thymine: 胸腺嘧啶
+cytosine: 胞嘧啶
+uracil: 尿嘧啶
+nucleotide: 核苷酸
+nucleoside: 核苷
+deoxy-: 前缀，脱氧
+adenosine: 腺苷
+guanosine: 鸟苷
+uridine: 尿苷
+cytidine: 胞苷
+palindrome: 回文
+mirror repeat: 镜像重复
+backbone: 骨架
+hyperchromic effect: 增色效应
+fatty acids: 脂肪酸
+glycerophospholipids: 甘油磷脂
+phospholipase: 磷脂酶
+sphingolipids: 鞘脂
+terpene: 萜类
+kinase: 激酶
+scurvy: 坏血病
+riboflavin: 核黄素
+glycero-: 前缀，甘油
+residue: 残基
+apoptotic: 凋亡的
+diffusion: 扩散

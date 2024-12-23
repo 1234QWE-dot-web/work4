@@ -1,0 +1,93 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Jargon Killer Game</title>  
+    <style>  
+        body, html {  
+            margin: 0;  
+            padding: 0;  
+            width: 100%;  
+            height: 100%;  
+            overflow: hidden;  
+            font-family: Arial, sans-serif;  
+            color: #fff;  
+        }  
+
+        /* 视频的全屏背景样式 */  
+        #bg-video {  
+            position: fixed;  
+            top: 0;  
+            left: 0;  
+            width: 100%;  
+            height: 100%;  
+            object-fit: cover;  
+            z-index: -1;  
+        }  
+
+        /* 页面内容居中显示 */  
+        .content {  
+            display: flex;  
+            flex-direction: column;  
+            justify-content: center;  
+            align-items: center;  
+            height: 100%;  
+        }  
+
+        h1 {  
+            font-size: 3rem;  
+            margin-bottom: 1rem;  
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);  
+        }  
+
+        pre {  
+            background: rgba(0, 0, 0, 0.6);  
+            padding: 1rem;  
+            border-radius: 5px;  
+            color: #ffa726;  
+            max-width: 80%;  
+            max-height: 50%;  
+            overflow-y: auto;  
+            text-shadow: none;  
+        }  
+
+        .error {  
+            color: #f44336;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <!-- 嵌入背景视频 -->  
+    <video id="bg-video" autoplay muted loop>  
+        <source src="DNA动图.MP4" type="video/mp4">  
+        Your browser does not support the video tag.  
+    </video>  
+
+    <div class="content">  
+        <h1>Jargon Killer Game</h1>  
+        <div id="content">  
+            <p>Loading jargon words...</p>  
+        </div>  
+    </div>  
+
+    <script>  
+        // 引用和显示同级目录的 word.txt 文件  
+        fetch('./word.txt')  
+            .then(response => {  
+                if (!response.ok) {  
+                    throw new Error('Unable to fetch word.txt.');  
+                }  
+                return response.text();  
+            })  
+            .then(data => {  
+                const contentDiv = document.getElementById('content');  
+                contentDiv.innerHTML = `<pre>${data}</pre>`;  
+            })  
+            .catch(error => {  
+                const contentDiv = document.getElementById('content');  
+                contentDiv.innerHTML = `<p class="error">Error: ${error.message}</p>`;  
+            });  
+    </script>  
+</body>  
+</html>
