@@ -9,7 +9,7 @@ fetch('questions.json')
     questions = data;  
     loadQuestion();  
   })  
-  .catch(err => console.error('Failed to load questions:', err));  
+  .catch(err => console.error('无法加载问题:', err));  
 
 // 加载题目  
 function loadQuestion() {  
@@ -60,10 +60,8 @@ function checkAnswer(answer) {
   if (answer.trim().toLowerCase() === question.answer.trim().toLowerCase()) {  
     score++;  
     feedback.textContent = "✔️ 回答正确！";  
-    feedback.className = "correct";  
   } else {  
     feedback.textContent = `❌ 回答错误！正确答案是：${question.answer}`;  
-    feedback.className = "wrong";  
   }  
 
   document.getElementById("score").textContent = `得分: ${score}`;  
