@@ -1,22 +1,18 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>PyScript Web App</title>  
-    <link rel="stylesheet" href="https://1234qwe-dot-web.github.io/work4/">  
-    <script defer src="https://1234qwe-dot-web.github.io/work4/"></script>  
-</head>  
-<body>  
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+  <pyscript>
+    from pyscript import *
     
-    <py-script>  
-       import matplotlib.pyplot as plt
-
-        X = [1,2,3,4,5]
-        Y = [2,3,5,7,11]
-
-        plt.plot(x,y)
-        plt.show()
-    </py-script>  
-</body>  
+    @pyscript.run
+    def greet():
+        print("Hello, PyScript!")
+        
+    greet()
+  </pyscript>
+</body>
 </html>
